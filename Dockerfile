@@ -7,6 +7,7 @@ FROM node:14-alpine
 ENV NODE_ENV=production \
   MONGODB_URIX=mongodb://mongodb \
   COLLECTION=agendaJobs \
+  PORT=8080
   BASE_PATH=/
 
 RUN mkdir -p /agendash
