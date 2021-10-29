@@ -5,7 +5,7 @@ FROM node:14-alpine
 #    apk add --no-cache bash gawk sed grep bc coreutils git openssh
 
 ENV NODE_ENV=production \
-  MONGODB_URI=mongodb://mongodb \
+  MONGODB_URIX=mongodb://mongodb \
   COLLECTION=agendaJobs \
   BASE_PATH=/
 
@@ -18,6 +18,6 @@ RUN npm install && npm cache clean --force
 COPY . /agendash
 RUN chmod +x /agendash/entrypoint.sh
 
-EXPOSE 3000
+EXPOSE 8080
 
 ENTRYPOINT ["/agendash/entrypoint.sh"]
